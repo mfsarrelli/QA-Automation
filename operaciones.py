@@ -1,3 +1,5 @@
+### DEFINIMOS OPERACIONES Y FC CALCULADORA
+
 def sumar (a , b):
     return a+b
 
@@ -8,7 +10,7 @@ def multiplicar (a , b):
     return a*b
 
 def dividir (a , b):
-    if b == 0:
+    if b == 0 or a == 0:
         raise ValueError ('error al dividir por cero')
     return a/b
 
@@ -29,6 +31,6 @@ def calculadora_simple (operacion, a, b):
             raise KeyError ('operacion no valida')
         
     except ZeroDivisionError:
-        return 'Error: no se puede dividir por cero'
+        raise 'Error: no se puede dividir por cero'
     except ValueError:
         raise 'Error: los valores deben ser numericos'
