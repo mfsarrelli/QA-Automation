@@ -6,3 +6,7 @@ def numeros_positivos():
 @pytest.fixture
 def numeros_negativos():
     return -2,8
+
+@pytest.fixture
+def numeros_flotantes():
+    return 0.1,0.2

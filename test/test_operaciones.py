@@ -6,8 +6,8 @@ import operaciones
     (-5,-1,-6), #numeros negativos
     (0,0,0) #numeros ceros
     ])
-@pytest.mark.smoke
 
+@pytest.mark.smoke
 def test_sumar_smoke(a, b, resultado):
     assert operaciones.sumar(a,b) == resultado
 
@@ -25,8 +25,8 @@ def test_multiplicar():
     assert operaciones.multiplicar(2,4) == 8
     assert operaciones.multiplicar(5,1) == 6
 
-def test_division_por_cero():
+@pytest.mark.exception
+def test_dividir_por_cero_exception():
     with pytest.raises(ValueError):
         operaciones.dividir(1,0)
-
 
